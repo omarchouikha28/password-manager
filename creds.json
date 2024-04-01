@@ -1,0 +1,25 @@
+{
+  "credentials": [
+    {
+      "category": "work",
+      "app": "outlook",
+      "userName": "testuser@mytest.com",
+      "encryptedPassword": "TXlQYXNzd29yZEAxMjM=",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "category": "school",
+      "app": "messenger",
+      "userName": "testuser@mytest.com",
+      "encryptedPassword": "TmV3UGFzc3dvcmRAMTIz"
+    },
+    {
+      "category": "Work",
+      "app": "DemoApp",
+      "userName": "omarchouikha",
+      "encryptedPassword": "dGVzdGluZ3RoZWVuY3J5cHRpb24=",
+      "id": 3
+    }
+  ]
+}

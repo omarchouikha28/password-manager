@@ -1,0 +1,16 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar {
+    background-color: #6184F9;
+}
+
+.toolbar>span {
+    color: white;
+}
+
+.icon {
+    padding-right: 10px;
+    color: white;
+}

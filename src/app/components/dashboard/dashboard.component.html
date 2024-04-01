@@ -1,0 +1,33 @@
+<div class="container">
+    <div *ngFor="let cred of credentials" class="cred-container">
+        <div class="section-container">
+            <div class="info-section">
+                <label>Username</label>
+                <span>{{cred.userName}}</span>
+            </div>
+            <div class="info-section">
+                <label>App</label>
+                <span>{{cred.app}}</span>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="info-section">
+                <label>Encrypted Password</label>
+                <span>{{cred.encryptedPassword}}</span>
+            </div>
+            <div class="info-section">
+                <label>Category</label>
+                <span>{{cred.category}}</span>
+            </div>
+        </div>
+        <hr class="divider" />
+        <div class="btn-container">
+            <button mat-raised-button color="secondary" (click)="openEditCredentialsForm(cred)">
+                Edit
+            </button>
+            <button mat-raised-button color="warn" (click)="deleteCredentials(cred.id)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>
