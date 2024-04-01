@@ -38,8 +38,8 @@ export class CredentialsFormComponent implements OnInit {
         next: () => {
           this._dialogRef.close(true);
         },
-        error: (error) => {
-          console.log(error)
+        error: error => {
+          console.error(error)
         }
       })
     } else {
@@ -49,8 +49,8 @@ export class CredentialsFormComponent implements OnInit {
           next: () => {
             this._dialogRef.close(true);
           },
-          error: (error: any) => {
-            console.log(error)
+          error: error => {
+            console.error(error)
           }
         })
       }

@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe({
-      next: (value) => {
+      next: value => {
         if (value)
           this.getCredentialsByUser();
       }
@@ -40,10 +40,12 @@ export class DashboardComponent implements OnInit {
 
   getCredentialsByUser() {
     this._credService.getByUser(this.data.userName).subscribe({
-      next: (value) => {
+      next: value => {
         this.credentials = value;
       },
-      error: console.log
+      error: error => {
+        console.error(error)
+      }
     })
   }
 
@@ -54,7 +56,9 @@ export class DashboardComponent implements OnInit {
         if (this.credentials.length == 1)
           this._dialogRef.close(true);
       },
-      error: console.log
+      error: error => {
+        console.error(error)
+      }
     })
   }
 

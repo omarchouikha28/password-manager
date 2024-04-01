@@ -46,10 +46,12 @@
 .btn-container {
     display: flex;
     justify-content: flex-end;
+    gap: 1rem;
 }
 
 .divider {
     margin: -1rem;
-    background-color: black;
+    background-color: white;
+    border-color: white;
     width: 105.8%;
 }

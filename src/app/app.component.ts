@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   openAddCredentialsForm() {
     const dialogRef = this._dialog.open(CredentialsFormComponent);
     dialogRef.afterClosed().subscribe({
-      next: (value) => {
+      next: value => {
         if (value)
           this.getCredentials();
       }
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe({
-      next: (value) => {
+      next: value => {
         if (value) {
           this.getCredentials();
         }
@@ -47,11 +47,11 @@ export class AppComponent implements OnInit {
   getCredentials(): void {
     this.credentials = new Set<string>();
     this._credService.getCredentials().subscribe({
-      next: (value) => {
+      next: value => {
         value.forEach((e) => this.credentials.add(e.userName));
       },
-      error: (error) => {
-        console.log(error)
+      error: error => {
+        console.error(error)
       }
     })
   }
